@@ -29,7 +29,8 @@ def solve_mincut(numpy.ndarray[int, mode="c", ndim = 2] edges, numpy.ndarray[dou
 
     cdef vector[int] v_labelling
 
-    if n_labels == 2:
+    if False:
+        #case when n_labels == 2 is buggy, code below is working for n_labels >= 2(!)
         assert False
         v_labelling = Solve2LabelProblem(<double*>c_unary.data, n_unaries, \
             <double*>c_pairwise.data, n_pairwise_cliques, \

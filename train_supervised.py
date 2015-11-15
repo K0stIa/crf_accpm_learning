@@ -41,8 +41,13 @@ def get_oracle_submodular_constraints(n_classes, n_pairwise_cliques, feature_dim
     return A, b
 
 M = sio.loadmat('data/mscows_data.mat')
-TRN = np.arange(0, 3)
-N_CLASSES = 3
+# take two label examples
+TRN = np.arange(10, 13)
+N_CLASSES = 2
+
+# uncomment this if you want to experiement with 3 label examples
+#TRN = np.arange(0, 3)
+#N_CLASSES = 3
 
 #build train data
 data = []
